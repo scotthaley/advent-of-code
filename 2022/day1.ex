@@ -30,8 +30,3 @@ defmodule Day1 do
 end
 
 Day1.exec
-
-
-
-
-
