@@ -7,6 +7,10 @@ defmodule Day2 do
     end
   end
 
+
+  def scoreRound(theirs <> " " <> yours) do
+  end
+
   def scoreRoundPartTwo(line) do
     with [theirs, winLoseDraw] <- line |> String.split(" ") do
       yours = getMine(theirs, winLoseDraw)
@@ -52,6 +56,11 @@ defmodule Day2 do
 
   def exec do
     {:ok, contents} = File.read("day2.txt")
+
+    case File.read("day2.txt") do
+      {:ok, contents} -> score(contents)
+      {err, _} 
+    end
 
     contents
     |> String.split("\n")
